@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WarehouseControl.Models
+﻿namespace WarehouseControl.Models
 {
     public class Shop
     {
+		public int ShopID { get; set; }
+		public string Name { get; set; }
+		public string Address { get; set; }
+
 		public Shop()
 		{
 		}
 
-		public bool Create(string name, string addr, string format)
+		public bool Create(string name, string addr)
 	    {
 		    return false;
 	    }

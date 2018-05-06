@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Shop>
+
+@foreach (var s in Model)
+{
+    <div>
+        <h3>@s.Name</h3>
+        <h4>@s.Address</h4>
+    </div>
+}

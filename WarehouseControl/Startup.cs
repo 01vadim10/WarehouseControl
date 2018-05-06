@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WarehouseControl.Models;
 
 namespace WarehouseControl
 {
@@ -21,6 +22,7 @@ namespace WarehouseControl
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+	        services.AddTransient<IShopRepository, FakeShopRepository>();
             services.AddMvc();
         }
 
@@ -43,7 +45,7 @@ namespace WarehouseControl
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Shop}/{action=List}/{id?}");
             });
         }
     }
