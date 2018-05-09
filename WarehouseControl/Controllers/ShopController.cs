@@ -5,7 +5,7 @@ namespace WarehouseControl.Controllers
 {
     public class ShopController : Controller
     {
-	    private IShopRepository _repository;
+	    private readonly IShopRepository _repository;
 
 	    public ShopController(IShopRepository repository)
 	    {

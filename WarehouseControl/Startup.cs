@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WarehouseControl.Models;
@@ -22,7 +23,13 @@ namespace WarehouseControl
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-	        services.AddTransient<IShopRepository, FakeShopRepository>();
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration["Data:WarehouseControlShops:ConnectionString"]));
+	        services.AddTransient<IShopRepository, EFShopRepository>();
+            services.AddTransient<IProductRepository, EFProductRepository>();
+            services.AddTransient<IPurchaseRepository, EFPurchaseRepository>();
+            services.AddTransient<ISupplierRepository, EFSupplierRepository>();
             services.AddMvc();
         }
 
@@ -47,6 +54,7 @@ namespace WarehouseControl
                     name: "default",
                     template: "{controller=Shop}/{action=List}/{id?}");
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }
