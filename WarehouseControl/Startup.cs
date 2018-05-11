@@ -52,8 +52,9 @@ namespace WarehouseControl
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Shop}/{action=List}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
+
             SeedData.EnsurePopulated(app);
         }
     }

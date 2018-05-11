@@ -98,9 +98,9 @@ namespace WarehouseControl.Models
                     new Product
                     {
                         Name = "Test",
-                        BarCode = "ttt",
+                        BarCode = 4453232,
                         Category = "SomeCat",
-                        Code = "T",
+                        Code = 345435,
                         Height = 1,
                         Length = 2,
                         Measure = "kg",
@@ -108,6 +108,76 @@ namespace WarehouseControl.Models
                         VAT = 88,
                         Weight = 1,
                         Width = 1
+                    },
+                    new Product
+                    {
+                        Name = "Чай",
+                        BarCode = 12343234512,
+                        Category = "Чай",
+                        Code = 113254534,
+                        Height = 164,
+                        Length = 164,
+                        Measure = "ШТ",
+                        TradeSurcharge = 33,
+                        VAT = 20,
+                        Weight = 0.1,
+                        Width = 55
+                    },
+                    new Product
+                    {
+                        Name = "Tea Tess",
+                        BarCode = 1111111111222,
+                        Category = "Tea",
+                        Code = 523423,
+                        Height = 0,
+                        Length = 0,
+                        Measure = "ШТ",
+                        TradeSurcharge = 2,
+                        VAT = 20,
+                        Weight = 0.04,
+                        Width = 0
+                    },
+                    new Product
+                    {
+                        Name = "Tea Tess Lime",
+                        BarCode = 30303030038,
+                        Category = "Tea",
+                        Code = 8383832,
+                        Height = 175,
+                        Length = 80,
+                        Measure = "ШТ",
+                        TradeSurcharge = 7,
+                        VAT = 20,
+                        Weight = 0.15,
+                        Width = 175
+                    },
+                    new Product
+                    {
+                        Name = "Tea Tipson",
+                        BarCode = 488484848,
+                        Category = "Tea",
+                        Code = 3202934029,
+                        Height = 100,
+                        Length = 75,
+                        Measure = "ШТ",
+                        TradeSurcharge = 8,
+                        VAT = 20,
+                        Weight = 0.1,
+                        Width = 85
+                    },
+                    new Product
+                    {
+                        Name = "Tea AHMAD",
+                        BarCode = 8788979277,
+                        Category = "Tea",
+                        Code = 9920390,
+                        Height = 88,
+                        Length = 292,
+                        Measure = "ШТ",
+                        TradeSurcharge = 7,
+                        VAT = 20,
+                        Weight = 0.8,
+                        Width = 40
                     }
                 );
                 context.SaveChanges();
