@@ -8,6 +8,7 @@ _Resharper*
 *.suo
 *.ncb
 packages/
+bower_components/
 *.Cache
 src/*.properties
 node_modules

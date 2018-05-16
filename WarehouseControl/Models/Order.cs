@@ -2,7 +2,7 @@
 
 namespace WarehouseControl.Models
 {
-    public class Purchase
+    public class Order
     {
         public int PurchaseId { get; set; }
         public Shop Shop { get; set; }

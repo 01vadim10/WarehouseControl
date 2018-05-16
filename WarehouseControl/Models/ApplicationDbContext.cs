@@ -11,7 +11,7 @@ namespace WarehouseControl.Models
 
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<Order> Purchases { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
     }
 }

@@ -4,6 +4,6 @@ namespace WarehouseControl.Models
 {
     public interface IPurchaseRepository
     {
-        IQueryable<Purchase> Purchases { get; }
+        IQueryable<Order> Purchases { get; }
     }
 }

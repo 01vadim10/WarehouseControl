@@ -11,6 +11,6 @@ namespace WarehouseControl.Models
             _context = context;
         }
 
-        public IQueryable<Purchase> Purchases => _context.Purchases;
+        public IQueryable<Order> Purchases => _context.Purchases;
     }
 }
