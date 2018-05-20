@@ -1,0 +1,47 @@
+﻿@model WarehouseControl.Models.Order
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Shop)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Shop.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contract)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contract)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplyDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SupplyDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OrderId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>

@@ -6,14 +6,5 @@
 		public string Name { get; set; }
         public string Code { get; set; }
 		public string Address { get; set; }
-
-		public Shop()
-		{
-		}
-
-		public bool Create(string name, string addr)
-	    {
-		    return false;
-	    }
     }
 }

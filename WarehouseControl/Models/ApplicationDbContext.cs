@@ -11,7 +11,16 @@ namespace WarehouseControl.Models
 
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Order> Purchases { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+
+//        public class ApplicationDbContextFactory
+//            : IDesignTimeDbContextFactory<ApplicationDbContext>
+//        {
+//
+//            public ApplicationDbContext CreateDbContext(string[] args) =>
+//                Program.BuildWebHost(args).Services
+//                    .GetRequiredService<ApplicationDbContext>();
+//        }
     }
 }

@@ -28,7 +28,7 @@ namespace WarehouseControl
                     Configuration["Data:WarehouseControlShops:ConnectionString"]));
 	        services.AddTransient<IShopRepository, EFShopRepository>();
             services.AddTransient<IProductRepository, EFProductRepository>();
-            services.AddTransient<IPurchaseRepository, EFPurchaseRepository>();
+            services.AddTransient<IOrderRepository, EFOrderRepository>();
             services.AddTransient<ISupplierRepository, EFSupplierRepository>();
             services.AddMvc();
         }

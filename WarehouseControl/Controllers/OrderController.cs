@@ -15,15 +15,6 @@ namespace WarehouseControl.Controllers
         }
 
         public ViewResult Index()
-            => View(new OrdersListViewModel {
-                Orders = new List<Order>
-                {
-                    new Order
-                    {
-                        Shop = _context.Shops
-                            .FirstOrDefault(s => s.Code.Contains("4"))
-                    }
-                }
-            });
+            => View(_context.Orders);
     }
 }
